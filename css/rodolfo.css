@@ -1,0 +1,468 @@
+:root {
+    font-size : 100%;
+    font-family : system-ui, sans-serif;
+    scroll-behavior : smooth;
+  }
+  * , *::before , *::after {
+    margin : 0;
+    padding : 0;
+    border : 0;
+    box-sizing : border-box;
+    vertical-align : baseline;
+  }
+  *::before , *::after {
+    display : block;
+  }
+  img , picture , video , iframe , figure , canvas {
+    max-width : 100%;
+    display : block;
+    width : 100%;
+    height : initial;
+    object-fit : cover;
+    object-position : center center;
+  }
+  a {
+    display : block;
+    text-decoration : none;
+    color : inherit;
+    font :  inherit;
+  }
+  p a {
+    display : inline;
+  }
+  li , menu, summary {
+    list-style-type : none;
+  }
+  ol {
+    counter-reset : revert;
+  }
+  h1 , h2 , h3 , h4 , h5 , h6 , p , span , a , strong , blockquote , i , b , u , em , pre , code , mark , del {
+    font :  inherit;
+    text-decoration :  none;
+    color : inherit;
+    overflow-wrap : break-word;
+    text-wrap : pretty;
+  }
+  mark {
+    background-color : transparent;
+  }
+  blockquote::before , blockquote::after , q::before , q::after {
+    content : none;
+  }
+  form , input , textarea , select , button , label {
+    font :  inherit;
+    hyphens : auto;
+    background-color : transparent;
+    color : inherit;
+    display : block;
+    appearance : none;
+  }
+  fieldset {
+    border : none;
+  }
+  ::placeholder {
+    color : unset;
+  }
+  button , label {
+    cursor : pointer;
+  }
+  table , tr , td , th , tbody , thead , tfoot {
+    border-collapse : collapse;
+    border-spacing : 0;
+    font : inherit;
+  }
+  svg {
+    width : 100%;
+    display : block;
+    fill : currentColor;
+  }
+  body {
+    min-height : 100vh;
+    line-height : 1.5em;
+    color : inherit;
+    hyphens : auto;
+    font-smooth : always;
+    -webkit-font-smoothing : antialiased;
+    -moz-osx-font-smoothing : grayscale;
+  }
+  @media ( prefers-color-scheme : dark ) {
+    :root {
+  }
+  
+  }
+  ::selection {
+    background-color : var(--tu-propia-variable);
+    color : var(--tu-propia-variable);
+  }
+
+  :root{
+    --font-text: cursive;
+  }
+
+  :root{
+    /* -------Colores------ */
+    --color-naranjita: #e88504;      /*  Color de del Encabezado y del Pie de pagina*/
+    --color-fondo: #00AF9A;       /*    Color de fonfo del testo y de la imagen*/
+    --sombra-uno: #b54800;         /*    Color de la sombra positiva*/
+    --sombra-dos: #ce7f3e;          /*     Color de la sombra negativa*/
+    /* -----Tipografia----- */
+    --texto: "Acme", sans-serif;          /*  Tipografi de toda la paguina*/
+  }
+
+
+
+
+
+
+  /*--------------------------
+  index.css
+  -Variables
+  -Cambio
+  -Header
+  -Main
+  -Footer
+  -------------------------*/
+
+  /*------Cambio------*/
+  /* Cambio a modo oscuro la pagina y el texto cambia tambein de color*/
+  .Cambio.isActive{
+    background-color: #313131;
+    color: white;
+  }
+
+
+    /*-------Header------*/
+  /* Descripcion: Contiene el encabezado de la paguina.
+  -H-Wrapper
+  -H-h1
+  -H-logo
+  -Menu-taco
+  -Nav
+  -Modo oscuro
+  */
+  .Header{
+    background-color: var(--color-naranjita);
+  }
+  .Header-wrapper{
+    padding: 1.5em;
+
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .Header-h1{
+    /* background-color: yellow; */
+  }
+  .Header-logo{
+    font-family: var(--texto);
+    font-size: 2.5em;
+    font-weight: 1000;
+
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+  }
+  .Header-menu-taco{
+    position: relative;
+    display: none;
+  }
+  .Header-cerrar{
+    display: none;
+  }
+  .Header-nav{
+    /* background-color: green; */
+    position: relative;
+  }
+  .Header-ul{
+    gap: 5em;
+
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .Header-li{
+    font-family: var(--texto);
+    font-size: 1.6em;
+    font-weight: 600;
+  }
+  .Header-li:active{
+    font-size: 2em;
+    font-weight: 900;
+    color: #00AF9A;
+  }
+  /*-----Modo-----*/
+  /* Boton quen contien "Sun y Moon" para hacer la pagina oscura o clara*/
+  .Header-li--modo{
+    /* background-color: red; */
+    width: 6em;
+    height: 3em;
+
+    gap: 1em;
+
+    padding: .5em;
+    border-radius: 2em;
+    border: rgb(22, 22, 22) solid .2em;
+
+    background: #3f3d3d;
+    box-shadow: 20px 20px 60px #bebebe,
+               -20px -20px 60px #ffffff;
+
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+
+    position: relative;
+  }
+  .Modo-sun{
+    color: orange;
+  }
+  .Modo-moon{
+    color: orange;
+  }
+  .Header-ul .Header-li--modo::before{
+    width: 2.5em;
+    height: 2.5em;
+    background-color: white;
+
+    border-radius: 50%;
+    border: solid black thin;
+
+    position: absolute;
+    content: "";
+
+    right: unset;
+    left: 0em;
+  }
+  .Header-ul .Header-li--modo.isActive::before{
+    border: solid black thin;
+
+    left: unset;
+    right: 0em;
+  }
+  
+
+  /*------Media------*/
+  /* Para cuando la pagina es vista en diferentes dispositivos lleva sus respectivas medias
+  asi se adapta a cada panatalla y tipo de pantalla
+  */
+  @media(max-width:960px){
+    .Header-logo{
+      font-size: 1.3em;
+      font-weight: 900;
+    }
+  }
+  @media(max-width:850px){
+    .Header-logo{
+      font-size: 2.5em;
+      font-weight: 1000;
+    }
+    .Header-menu-taco{
+        display: block;
+    }
+    .Header-cerrar{
+        display: block;
+        /* opacity: 0; */
+        position: relative;
+    }
+    .Header-nav{
+        background-color: var(--color-naranjita);
+        padding: 2em;
+  
+        gap: 2em;
+  
+        display: flex;
+        flex-direction: column;
+        align-items: end;
+  
+        position: absolute;
+        top: 0;
+        right: 0;
+  
+        opacity: 0;
+        visibility: hidden;
+        transition: .5s ease;
+    }
+    .Header-nav.isActive{
+        background-color: #414141;
+    }
+    .Header-nav.isVisible{
+        opacity: 1;
+        visibility: visible;
+    }
+    .Header-ul{
+        flex-direction: column;
+        align-items: end;
+    }
+  }
+  @media(max-width:480px){
+    .Header-logo{
+      font-size: 1.5em;
+      font-weight: 900;
+    }
+  }
+
+
+       /*----------Main---------*/
+  /* Descripcion: Contiene lo principan de la pagina.
+  Estruccturada:
+  -Section
+  -Imagen
+  */
+  .Main{
+    /* background-color: yellow; */
+    width: 100%;
+
+    margin-top: 4em;
+  }
+  /* Aqui tengo el texto de la informacion de Rodolfo, con su tamaño, su borde y sus sombras*/
+  .Main-section{
+    background-color: var(--color-fondo);
+    width: 80%;
+
+    border-radius: 1em;
+
+    background: var(--color-fondo);
+    box-shadow: 20px 20px 60px var(--sombra-uno),
+               -20px -20px 60px var(--sombra-dos);
+    
+    margin: 1em auto;
+    padding: 1em;
+  }
+  .h2{
+    padding: 1em;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 2em;
+    font-family: var(--texto);
+    font-weight: 650;
+    /* text-shadow: rgb(129, 129, 129) 6px 0; */
+    text-shadow: rgba(7, 5, 5, 0.718) 6px 6px 6px;
+  }
+  .h3{
+    padding: .5em;
+
+    display: flex;
+    justify-content: start;
+    align-items: center;
+
+    font-size: 1.5em;
+    font-family: var(--texto);
+    font-weight: 650;
+    font-style: italic;
+    /* text-shadow: rgb(129, 129, 129) 6px 0; */
+    text-shadow: rgb(114, 98, 98) 6px 6px 6px;
+  }
+  .p{
+    padding: 1em;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 1.5em;
+    font-family: var(--texto);
+    font-weight: 600;
+    font-style: italic;
+    word-spacing: .5em;
+
+    line-height: 2em;
+  }
+  /* Y aqui esta la foto con su border y sus sombras*/
+  .Main-img{
+    width: 70%;
+    margin: 5em auto;
+    padding: 2em;
+
+    background: var(--color-fondo);
+    box-shadow: 20px 20px 60px var(--sombra-uno),
+               -20px -20px 60px var(--sombra-dos);
+
+    border-radius: 1em;
+  }
+  .Chulo{
+    border-radius: 1em;
+  }
+  @media(max-width:480px){
+    .h2{
+      line-height: 1.5em;
+    }
+  }
+
+
+        /*----------Footer---------*/
+  /* Descripcion: Contiene lo principan de la pagina.
+  Estruccturada:
+  -Webs
+  -Info
+  */
+.Footer{
+    background-color: var(--color-naranjita);
+     /* width: 90%; */
+     
+     margin: 5em auto;
+  
+     display: flex;
+     flex-flow: column;
+     justify-content: center;
+     align-items: center;
+  }
+  .Footer-webs{
+    width: 50%;
+    margin: 2em;
+  }
+  .Webs-ul{
+    /* gap: 4em; */
+  
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .Footer-info{
+    margin: 2em;
+    padding: 1em;
+  
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+  }
+  .Info-p{
+    font-size: 1.3em;
+    font-family: var(--texto);
+  }
+  /*------Media------*/
+    /* Para cuando la pagina es vista en diferentes dispositivos lleva sus respectivas medias
+    asi se adapta a cada panatalla y tipo de pantalla
+    */
+    @media(max-width:650px){
+      .Footer-webs{
+        width: 70%;
+      }
+    }
+    @media(max-width:480px){
+        .Footer{
+          /* background-color: var(--color-naranjita); */
+        }
+        .Webs-ul{
+          gap: 4em;
+      
+          display: flex;
+          flex-flow: column;
+          justify-content: center;
+          align-items: center;
+        }
+        .Footer-info{
+          gap: 3em;
+        }
+        .Info-p{
+          text-align: center;
+        }
+      }

@@ -1,0 +1,53 @@
+# -------------------------------
+# 🔐 Redirección a HTTPS
+# -------------------------------
+RewriteEngine On
+RewriteCond %{HTTPS} off
+RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+# -------------------------------
+# ❌ Página 404 personalizada
+# -------------------------------
+ErrorDocument 404 /404.html
+
+# -------------------------------
+# 🗂️ Caché del navegador
+# -------------------------------
+<IfModule mod_expires.c>
+  ExpiresActive On
+
+  # Imágenes
+  ExpiresByType image/jpeg "access plus 1 year"
+  ExpiresByType image/png "access plus 1 year"
+  ExpiresByType image/gif "access plus 1 year"
+  ExpiresByType image/webp "access plus 1 year"
+  ExpiresByType image/svg+xml "access plus 1 year"
+
+  # HTML, CSS, JS
+  ExpiresByType text/html "access plus 1 hour"
+  ExpiresByType text/css "access plus 1 month"
+  ExpiresByType application/javascript "access plus 1 month"
+</IfModule>
+
+# Encabezados de caché
+<IfModule mod_headers.c>
+  <FilesMatch "\.(jpg|jpeg|png|gif|webp|css|js|svg)$">
+    Header set Cache-Control "public, max-age=31536000"
+  </FilesMatch>
+</IfModule>
+
+# -------------------------------
+# 🗜️ Compresión GZIP
+# -------------------------------
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/html
+  AddOutputFilterByType DEFLATE text/css
+  AddOutputFilterByType DEFLATE text/javascript
+  AddOutputFilterByType DEFLATE application/javascript
+  AddOutputFilterByType DEFLATE image/svg+xml
+</IfModule>
+
+
+
+
+

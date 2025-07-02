@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Página principal del proyecto">
+    <meta name="author" content="Johanna">
+    <title>Principal</title>
+    <link rel="stylesheet" href="css/index.css">
+    <script src="js/index.js" defer></script>
+</head>
+
+<!-- 
+Descripcion: Este es el HTML principal de la pagina web.
+Su estructura es de:
+-Un raton con dibujo
+-Encabezado
+-Barra de navegacion
+-Contenido principal
+-Pie de paguina
+-->
+
+
+
+<!-- Aqui he puesto lo de cambios para poder recrear el modo oscuro de la pagina web -->
+<body class="Cambio">
+
+
+<!-- Tambien he agrgado un MOUSE en el cual coloque un svg encima del Mouse -->
+    <div class="Mouse">
+        <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 2000 2000" style="enable-background:new 0 0 2000 2000;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#010202;}
+	.st1{fill:#00AF9A;}
+	.st2{fill:#FF5100;}
+	.st3{fill:#FFFFFF;}
+	.st4{fill:#000F9F;}
+	.st5{fill:#9E28B5;}
+	.st6{fill:#76BC21;}
+	.st7{fill:#FFDD00;}
+	.st8{fill:#F5333F;}
+</style>
+<g>
+	<polygon class="st0" points="1879.47,1110.46 1647.39,1110.46 1849.74,917.38 1828.76,357.6 1610.85,535.72 1601.92,208.19 
+		1345.32,206.45 1522.24,30.68 1191.34,30.68 992.03,196.69 897.62,144.54 552.18,144.54 120.53,384.43 421.36,384.43 
+		141.93,636.68 122.94,1137.54 331.27,899.67 314.61,1474.3 595.46,1969.32 602.16,1591.95 886.95,1374.65 1080.06,1374.65 
+		1385.02,1589.87 1387.65,1969.32 1635.55,1490.62 1539.16,1316.36 1757.63,1316.36 	"/>
+	<path class="st1" d="M1114.31,1314.88c35.17,0,67.91-28.81,86.87-58.43l51.53-80.51c14.23-22.24,21.8-48.09,21.8-74.49V976.78
+		l43.48-73.13L1274.5,816V661.41c0-45.93-37.23-83.16-83.16-83.16h-357.3l13.64,131.21L733.76,605.91
+		c-13.2,14.72-21.23,34.17-21.23,55.5V816l-43.48,87.65l43.48,73.13v124.67c0,26.4,7.56,52.25,21.8,74.49l51.53,80.51
+		c18.96,29.62,51.7,58.43,86.87,58.43H1114.31z"/>
+	<path class="st2" d="M1774.65,1170.23h-276.48l290.84-277.51l-15.47-412.79l-219.11,179.11l-10.67-391.48l-342.41-2.32
+		l175.94-174.8h-164.3L998.9,268.76l-116.69-64.45H567.68L351.11,324.66h225.64L200.7,664.14l-11.65,307.19l206.78-236.1l-21,724.1
+		l164.74,290.38l3.33-187.74l260.98-199.12c0,0-63.37-55.17-73.46-70.93l-51.53-80.51c-21.05-32.89-32.17-70.91-32.17-109.96V994.86
+		l-52.54-88.37l52.54-105.92V661.41c0-36.76,13.51-72.06,38.04-99.42l35.37-34.64l72.67,69.94l-10.38-84.84h408.9
+		c82.13,0,148.95,66.82,148.95,148.95v139.17l52.54,105.91l-52.54,88.37v106.59c0,39.05-11.13,77.07-32.17,109.96l-51.53,80.51
+		c-10.09,15.76-74.99,81.24-74.99,81.24l262.65,185.36l3.17,179.78l120.75-246.02l-130.38-235.68h285.76L1774.65,1170.23z"/>
+	<path class="st0" d="M831.57,850.92c0,17.44,13.76,31.57,30.74,31.57c0.86,0,1.7-0.05,2.54-0.12l-19.88,20.97l-60.25-15.87
+		l65.84,46.94l58.61-60.68l22.82,22.22l17.81-16.79l28.95,45.43l-8.2-41.91h42.73l-8.2,41.91l30.03-47.19l19.68,18.56l25.44-24.78
+		l61.08,63.24l65.84-46.94l-60.25,15.87l-19.88-20.97c0.84,0.07,1.69,0.12,2.54,0.12c16.98,0,30.74-14.14,30.74-31.57
+		c0-16.16-11.83-29.48-27.07-31.34l109.3-106.43l-189.17,134.8l-35.54-33.05l-24.43-146.28l-24.43,146.28l-35.54,33.05
+		l-189.17-134.8L854.4,820.41C841.26,824,831.57,836.3,831.57,850.92z"/>
+	<polygon class="st0" points="938.92,773.23 830.32,722.72 933.7,797.18 	"/>
+	<polygon class="st0" points="1167.42,722.72 1048.61,773.23 1053.83,797.18 	"/>
+	<polygon class="st0" points="1122.6,1007.27 999.4,1007.27 1087.42,901.23 993.39,969.27 899.35,901.23 987.37,1007.27 
+		864.3,1007.27 781.51,1156.05 847.29,1260.41 1139.61,1260.41 1205.39,1156.05 	"/>
+	<g>
+		<polygon class="st3" points="1106.28,1033.72 1056.5,1033.72 1081.39,1085.55 		"/>
+		<polygon class="st3" points="988.94,1033.03 939.16,1033.03 964.05,1084.86 		"/>
+		<polygon class="st3" points="930.27,1032.69 880.49,1032.69 905.38,1084.52 		"/>
+		<polygon class="st3" points="860.4,1230.92 910.18,1230.92 885.29,1179.1 		"/>
+		<polygon class="st3" points="914.69,1230.92 964.47,1230.92 939.58,1179.1 		"/>
+		<polygon class="st3" points="968.97,1230.92 1018.76,1230.92 993.86,1179.1 		"/>
+		<polygon class="st3" points="997.83,1033.38 1022.72,1085.21 1047.61,1033.38 		"/>
+		<polygon class="st3" points="1023.26,1230.92 1073.04,1230.92 1048.15,1179.1 		"/>
+		<polygon class="st3" points="1102.44,1179.1 1077.55,1230.92 1127.33,1230.92 		"/>
+	</g>
+	<g>
+		<path class="st3" d="M1122.92,833.7c-5.92,0-10.71,4.93-10.71,11s4.8,11,10.71,11c5.92,0,10.71-4.93,10.71-11
+			S1128.84,833.7,1122.92,833.7z"/>
+		<path class="st3" d="M868.95,833.7c-5.92,0-10.71,4.93-10.71,11s4.8,11,10.71,11c5.92,0,10.71-4.93,10.71-11
+			S874.86,833.7,868.95,833.7z"/>
+	</g>
+</g>
+</svg>
+
+    </div>
+
+
+<!-- Y aqui empezamos con el EMCABEZADO de la pagina que consta con:
+	 -Logo de la paguina 
+	 -Menu de la pagina
+	 -Acceso a los otros HTML
+	 -Modo oscuro
+	-->
+
+<header class="Header">
+    <div class="Header-wrapper">
+    
+        <!-- Para poder recrear el muñeco de AURONPLAY cogi el svg de su paguina que ahora ya esta cerrada que se llama Auronhouse en la cual vendia ropa.
+        Y para el nombre no me complique mucho ya que esta pagina iria diriguida para el publico que sigue a este creador de contenido. 
+        -->
+        <h1 class="Header-h1">
+                <div class="Header-logo">
+                    <a href="index.html" title="Pagina-principal" class="logo">AURONERS</a>
+                    <div class="Header-svg">
+                        <!-- SVG sacado de la pagina de AURONHOUSE -->
+                        <svg width="60" height="60" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+         viewBox="0 0 2000 2000" style="enable-background:new 0 0 2000 2000;" xml:space="preserve">
+    <style type="text/css">
+        .st0{fill:#010202;}
+        .st1{fill:#00AF9A;}
+        .st2{fill:#FF5100;}
+        .st3{fill:#FFFFFF;}
+        .st4{fill:#000F9F;}
+        .st5{fill:#9E28B5;}
+        .st6{fill:#76BC21;}
+        .st7{fill:#FFDD00;}
+        .st8{fill:#F5333F;}
+    </style>
+    <g>
+        <polygon class="st0" points="1879.47,1110.46 1647.39,1110.46 1849.74,917.38 1828.76,357.6 1610.85,535.72 1601.92,208.19 
+            1345.32,206.45 1522.24,30.68 1191.34,30.68 992.03,196.69 897.62,144.54 552.18,144.54 120.53,384.43 421.36,384.43 
+            141.93,636.68 122.94,1137.54 331.27,899.67 314.61,1474.3 595.46,1969.32 602.16,1591.95 886.95,1374.65 1080.06,1374.65 
+            1385.02,1589.87 1387.65,1969.32 1635.55,1490.62 1539.16,1316.36 1757.63,1316.36 	"/>
+        <path class="st1" d="M1114.31,1314.88c35.17,0,67.91-28.81,86.87-58.43l51.53-80.51c14.23-22.24,21.8-48.09,21.8-74.49V976.78
+            l43.48-73.13L1274.5,816V661.41c0-45.93-37.23-83.16-83.16-83.16h-357.3l13.64,131.21L733.76,605.91
+            c-13.2,14.72-21.23,34.17-21.23,55.5V816l-43.48,87.65l43.48,73.13v124.67c0,26.4,7.56,52.25,21.8,74.49l51.53,80.51
+            c18.96,29.62,51.7,58.43,86.87,58.43H1114.31z"/>
+        <path class="st2" d="M1774.65,1170.23h-276.48l290.84-277.51l-15.47-412.79l-219.11,179.11l-10.67-391.48l-342.41-2.32
+            l175.94-174.8h-164.3L998.9,268.76l-116.69-64.45H567.68L351.11,324.66h225.64L200.7,664.14l-11.65,307.19l206.78-236.1l-21,724.1
+            l164.74,290.38l3.33-187.74l260.98-199.12c0,0-63.37-55.17-73.46-70.93l-51.53-80.51c-21.05-32.89-32.17-70.91-32.17-109.96V994.86
+            l-52.54-88.37l52.54-105.92V661.41c0-36.76,13.51-72.06,38.04-99.42l35.37-34.64l72.67,69.94l-10.38-84.84h408.9
+            c82.13,0,148.95,66.82,148.95,148.95v139.17l52.54,105.91l-52.54,88.37v106.59c0,39.05-11.13,77.07-32.17,109.96l-51.53,80.51
+            c-10.09,15.76-74.99,81.24-74.99,81.24l262.65,185.36l3.17,179.78l120.75-246.02l-130.38-235.68h285.76L1774.65,1170.23z"/>
+        <path class="st0" d="M831.57,850.92c0,17.44,13.76,31.57,30.74,31.57c0.86,0,1.7-0.05,2.54-0.12l-19.88,20.97l-60.25-15.87
+            l65.84,46.94l58.61-60.68l22.82,22.22l17.81-16.79l28.95,45.43l-8.2-41.91h42.73l-8.2,41.91l30.03-47.19l19.68,18.56l25.44-24.78
+            l61.08,63.24l65.84-46.94l-60.25,15.87l-19.88-20.97c0.84,0.07,1.69,0.12,2.54,0.12c16.98,0,30.74-14.14,30.74-31.57
+            c0-16.16-11.83-29.48-27.07-31.34l109.3-106.43l-189.17,134.8l-35.54-33.05l-24.43-146.28l-24.43,146.28l-35.54,33.05
+            l-189.17-134.8L854.4,820.41C841.26,824,831.57,836.3,831.57,850.92z"/>
+        <polygon class="st0" points="938.92,773.23 830.32,722.72 933.7,797.18 	"/>
+        <polygon class="st0" points="1167.42,722.72 1048.61,773.23 1053.83,797.18 	"/>
+        <polygon class="st0" points="1122.6,1007.27 999.4,1007.27 1087.42,901.23 993.39,969.27 899.35,901.23 987.37,1007.27 
+            864.3,1007.27 781.51,1156.05 847.29,1260.41 1139.61,1260.41 1205.39,1156.05 	"/>
+        <g>
+            <polygon class="st3" points="1106.28,1033.72 1056.5,1033.72 1081.39,1085.55 		"/>
+            <polygon class="st3" points="988.94,1033.03 939.16,1033.03 964.05,1084.86 		"/>
+            <polygon class="st3" points="930.27,1032.69 880.49,1032.69 905.38,1084.52 		"/>
+            <polygon class="st3" points="860.4,1230.92 910.18,1230.92 885.29,1179.1 		"/>
+            <polygon class="st3" points="914.69,1230.92 964.47,1230.92 939.58,1179.1 		"/>
+            <polygon class="st3" points="968.97,1230.92 1018.76,1230.92 993.86,1179.1 		"/>
+            <polygon class="st3" points="997.83,1033.38 1022.72,1085.21 1047.61,1033.38 		"/>
+            <polygon class="st3" points="1023.26,1230.92 1073.04,1230.92 1048.15,1179.1 		"/>
+            <polygon class="st3" points="1102.44,1179.1 1077.55,1230.92 1127.33,1230.92 		"/>
+        </g>
+        <g>
+            <path class="st3" d="M1122.92,833.7c-5.92,0-10.71,4.93-10.71,11s4.8,11,10.71,11c5.92,0,10.71-4.93,10.71-11
+                S1128.84,833.7,1122.92,833.7z"/>
+            <path class="st3" d="M868.95,833.7c-5.92,0-10.71,4.93-10.71,11s4.8,11,10.71,11c5.92,0,10.71-4.93,10.71-11
+                S874.86,833.7,868.95,833.7z"/>
+        </g>
+    </g>
+                        </svg>
+    
+                    </div>
+                </div>
+        </h1>
+    
+    
+        <!-- Aqui coloque el menu que aparecera cuando nuestra pagina de haga pequeña y la vean ya sea por tablets o moviles -->
+        <button class="Header-menu-taco">
+                <title>menu-toca</title>
+                <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"/>
+                  </svg>
+        </button>
+    
+        <!-- Aqui estaria la barra de navgacion donde estarian lso otros HTML los cual los llamaremos Rodolfo y Memes y tambein estaria el modo oscuro -->
+        <nav class="Header-nav">
+                <button class="Header-cerrar">
+                    <title>butt-cerrar></title>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-x-lg" viewBox="0 0 16 16">
+                        <path d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8z"/>
+                    </svg>
+                </button>
+                <ul class="Header-ul">
+                    <li class="Header-li">
+                        <a href="rodolfo.html" title="Pagina-rodolfo" class="Rodolfo">Rodolfo</a>
+                    </li>
+                    <li class="Header-li">
+                        <a href="memes.html" title="Pagina-memes" class="Videos">Memes</a>
+                    </li>
+    
+                    <!-- Este seria el boton el cual al darle clikc la pagina se pondria oscura modo noche y clara en modo dia  -->
+                    <li class="Header-li--modo">
+                        <i class="Modo-sun">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-brightness-high-fill" viewBox="0 0 16 16">
+                                <path d="M12 8a4 4 0 1 1-8 0 4 4 0 0 1 8 0M8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0m0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13m8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5M3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8m10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0m-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0m9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707M4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708"/>
+                            </svg>
+                        </i>
+                        <i class="Modo-moon">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-moon-stars-fill" viewBox="0 0 16 16">
+                                <path d="M6 .278a.77.77 0 0 1 .08.858 7.2 7.2 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277q.792-.001 1.533-.16a.79.79 0 0 1 .81.316.73.73 0 0 1-.031.893A8.35 8.35 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.75.75 0 0 1 6 .278"/>
+                                <path d="M10.794 3.148a.217.217 0 0 1 .412 0l.387 1.162c.173.518.579.924 1.097 1.097l1.162.387a.217.217 0 0 1 0 .412l-1.162.387a1.73 1.73 0 0 0-1.097 1.097l-.387 1.162a.217.217 0 0 1-.412 0l-.387-1.162A1.73 1.73 0 0 0 9.31 6.593l-1.162-.387a.217.217 0 0 1 0-.412l1.162-.387a1.73 1.73 0 0 0 1.097-1.097zM13.863.099a.145.145 0 0 1 .274 0l.258.774c.115.346.386.617.732.732l.774.258a.145.145 0 0 1 0 .274l-.774.258a1.16 1.16 0 0 0-.732.732l-.258.774a.145.145 0 0 1-.274 0l-.258-.774a1.16 1.16 0 0 0-.732-.732l-.774-.258a.145.145 0 0 1 0-.274l.774-.258c.346-.115.617-.386.732-.732z"/>
+                            </svg>
+                        </i>
+                    </li>
+                </ul>
+        </nav>
+    </div>
+</header>
+    
+    
+<!-- Empzariamos con el contenido principal de la pagina compuesta por:
+ -Maquesinas con fotos 
+ -Marquesinas con texto
+ -Un Grid
+ -Un Acordeon
+--> 
+
+<main class="Main">
+    <div class="Main-wrapper">
+    
+<!-- Pense que a esta pagina le quedaria bien una marquesina mi primera idea fue solo penerle la frase "TODO BIEN, TODO CORRECTO Y YO QUE ME ALEGRO",  pero luego le añadi tambien 
+unas imagenes a a marquesina pensando que quedaria mejor. 
+-->
+        <div class="Wrapper-marquesinas">
+    
+            <!-- Le puse a cada imagen su PICTURE, su LOADING y su FETCHPRIORITY -->
+            <ul class="Marquesinas-img">
+                <li class="Marque-img">
+                        <picture>
+                            <source srcset="assets/Clown.webp" type="image/webp">
+                            <source srcset="assets/Clown.jpg" type="image/jpeg">
+                            <img alt="Clown" loading="lazy" fetchpriority="high">
+                        </picture>
+                </li>
+                <li class="Marque-img">
+                        <picture>
+                            <source srcset="assets/Clown.webp" type="image/webp">
+                            <source srcset="assets/Clown.jpg" type="image/jpeg">
+                            <img alt="Clown" loading="lazy" fetchpriority="high">
+                        </picture>
+                </li>
+                <li class="Marque-img">
+                        <picture>
+                            <source srcset="assets/Clown.webp" type="image/webp">
+                            <source srcset="assets/Clown.jpg" type="image/jpeg">
+                            <img alt="Clown" loading="lazy" fetchpriority="high">
+                        </picture>
+                </li>
+                <li class="Marque-img">
+                        <picture>
+                            <source srcset="assets/Clown.webp" type="image/webp">
+                            <source srcset="assets/Clown.jpg" type="image/jpeg">
+                            <img alt="Clown" loading="lazy" fetchpriority="high">
+                        </picture>
+                </li>
+                <li class="Marque-img">
+                        <picture>
+                            <source srcset="assets/Clown.webp" type="image/webp">
+                            <source srcset="assets/Clown.jpg" type="image/jpeg">
+                            <img alt="Clown" loading="lazy" fetchpriority="high">
+                        </picture>
+                </li>
+                <li class="Marque-img">
+                        <picture>
+                            <source srcset="assets/Clown.webp" type="image/webp">
+                            <source srcset="assets/Clown.jpg" type="image/jpeg">
+                            <img alt="Clown" loading="lazy" fetchpriority="high">
+                        </picture>
+                </li>
+            </ul>
+    
+            <!-- Y aqui termine con el texto -->
+            <ul class="Marquesinas-texto">
+                <li class="Marquesina-span">Todo bien, todo correcto y yo que me alegro</li>
+                <li class="Marquesina-span">Todo bien, todo correcto y yo que me alegro</li>
+                <li class="Marquesina-span">Todo bien, todo correcto y yo que me alegro</li>
+                <li class="Marquesina-span">Todo bien, todo correcto y yo que me alegro</li>
+                <li class="Marquesina-span">Todo bien, todo correcto y yo que me alegro</li>
+                <li class="Marquesina-span">Todo bien, todo correcto y yo que me alegro</li>
+            </ul>
+        </div>
+
+        <!-- METER H2 Y H3 CON Article -->
+       <!-- COMPLETAR PARA AGREGAR LAS MEJORAS -->
+       <article class="Wrapper-article">
+
+        <h2 class="h2">Si no sabeis mucho de Auronplay aqui os dejo un poco que informacion</h2>
+         <p class="p-arti">Raúl Álvarez Genes (Badalona, 5 de noviembre de 1988), mejor conocido como AuronPlay o simplemente Auron, es un creador de contenido español con una carrera que comenzó en YouTube en 2006 y que hoy abarca Twitch, vlogs, comedia, gaming y espectáculos en vivo</p>
+       
+        <h2 class="h2">Que cual es su recorrido a lo largo de estos año, por aqui lo podras ver:</h2>
+        <h3 class="h3">🎬 2006</h3>
+         <p class="p-arti">
+           Inicio en YouTube con el canal "AuronPlay".
+           
+           Publica sus primeros videos con estilo humorístico y crítica social.
+         </p>
+        <h3 class="h3">🚀 2012-2015</h3>
+         <p class="p-arti">
+           Se populariza con videorreseñas satíricas y críticas a otros youtubers.
+           
+           Empieza a formar parte de la "old school" española de YouTube.
+           
+           Sus videos comienzan a superar el millón de visualizaciones con regularidad.
+         </p>
+        <h3 class="h3">📈 2018</h3>
+         <p class="p-arti">
+           Lanza videos virales que superan los 10 millones de visualizaciones.
+           
+           Se consolida como uno de los youtubers más grandes de España.
+           
+           Participa en eventos y colaboraciones con otros creadores como Wismichu. 
+         </p>
+        <h3 class="h3">🎮 2020</h3>
+         <p class="p-arti">
+           Da el salto a Twitch, con enorme éxito:
+           
+           En menos de un año, se convierte en uno de los streamers más vistos del mundo.
+           
+           Transmite variedad de contenido: Just Chatting, Minecraft, GTA RP.
+           
+           Participa en servidores famosos como Egoland y TortillaLand.
+           
+           Alcanza más de 10 millones de seguidores en Twitch en tiempo récord.
+          </p>
+        <h3 class="h3">🌍 2021</h3>
+         <p class="p-arti">
+           Reconocido en los Esland Awards y otros eventos.
+           
+           Su canal de Twitch llega a ser el más visto en habla hispana.
+           
+           Promedia más de 70.000 espectadores por directo.
+           
+           En YouTube:
+           
+           Supera los 3.500 millones de visualizaciones acumuladas.
+           
+           Tiene múltiples videos con más de 20 millones de views.
+           
+         </p>
+        <h3 class="h3">🏆 2022</h3>
+         <p class="p-arti">
+           Rompe récords de audiencia en eventos como TortillaLand 2.
+           
+           AuronPlay alcanza los:
+           
+           29 millones de suscriptores en YouTube.
+           
+           15 millones de seguidores en Twitch.
+           
+           Su canal se encuentra entre los 10 más seguidos del mundo en Twitch.
+           
+         </p>
+        <h3 class="h3">🔥 2023</h3>
+         <p class="p-arti">
+           Participa en proyectos como Squid Craft Games y Minecraft Extremo.
+           
+           Mantiene una media de:
+           
+           ~22.000 espectadores en Twitch por stream.
+           
+           Más de 400.000 vistas en sus clips y resúmenes diarios en YouTube.
+           
+         </p>
+        <h3 class="h3">📊 Datos actuales (2024-2025)</h3>
+         <p class="p-arti">
+           YouTube:
+           
+           Suscriptores: +29.3 millones.
+           
+           Visualizaciones acumuladas: más de 4.000 millones.
+           
+           Twitch:
+           
+           Seguidores: +16.5 millones.
+           
+           Promedio de viewers: entre 20.000 y 30.000 por stream.
+           
+           Categorías populares: Just Chatting, GTA RP, Minecraft.
+           
+         </p>
+ </article>  
+    
+<!-- En este punto le queria meter iamgenes pero al final se las puse por CSS porque no me cuadraban como queria -->
+        <div class="Wrapper-grid">
+            <div class="Grid-img"></div>
+            <div class="Grid-video"></div>
+            <!-- <div class="Grid-videos"></div>
+            <div class="Grid-imag"></div> -->
+        </div>
+    
+<!-- Y para terminar esta parte le agrege este acordeon con tres botones los cuaes contubieran un texto pequeño dando algo de informacion tanto de porque me hice mi pagian 
+de este creador de contenido y cosas de la pagina y a lo ultimo le añadi un pequeño SVG para que puedas darle click y te pueda llevar a HTML de memes. 
+-->
+        <section class="Wrapper-section">
+            <h4 class="Section-acordeon">
+                <button class="Button-a">¿Aburrrido?</button>
+                <title>button-acordeon</title>
+                <p class="p-a">Te gusta Auron?, tienes tiempo libre?, no sabes como perder el tiempo?, pues mira estas en el sitio adecuado, pierde tu tiempo viendo esta pagina.</p>
+            </h4>
+                <!-- <h2 class="Section-acordeon">
+                    <button class="Button-a">¿Porque hice la pagina sobre esto?</button>
+                    <p class="p-a">Bueno la verdad no tenia mucha idea de lo que podria hacer y bueno entre pensar y pensar me decidi hacer una pagina de un creador de acontenido que me gusta.</p>
+                </h2> -->
+            <h4 class="Section-acordeon">
+                <button class="Button-a">Memes</button>
+                <title>button-acordeon</title>
+                <p class="p-a">No esperes mas tiempo y si no le has dado "CLICK" a la parte de arriba con memes puedes darle al reloj de aqui abajo. ¿A que estas esperando?</p>
+                <a href="memes.html" title="button" class="Memes">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="Reloj" viewBox="0 0 16 16">
+                        <path d="M8.515 1.019A7 7 0 0 0 8 1V0a8 8 0 0 1 .589.022zm2.004.45a7 7 0 0 0-.985-.299l.219-.976q.576.129 1.126.342zm1.37.71a7 7 0 0 0-.439-.27l.493-.87a8 8 0 0 1 .979.654l-.615.789a7 7 0 0 0-.418-.302zm1.834 1.79a7 7 0 0 0-.653-.796l.724-.69q.406.429.747.91zm.744 1.352a7 7 0 0 0-.214-.468l.893-.45a8 8 0 0 1 .45 1.088l-.95.313a7 7 0 0 0-.179-.483m.53 2.507a7 7 0 0 0-.1-1.025l.985-.17q.1.58.116 1.17zm-.131 1.538q.05-.254.081-.51l.993.123a8 8 0 0 1-.23 1.155l-.964-.267q.069-.247.12-.501m-.952 2.379q.276-.436.486-.908l.914.405q-.24.54-.555 1.038zm-.964 1.205q.183-.183.35-.378l.758.653a8 8 0 0 1-.401.432z"/>
+                        <path d="M8 1a7 7 0 1 0 4.95 11.95l.707.707A8.001 8.001 0 1 1 8 0z"/>
+                        <path d="M7.5 3a.5.5 0 0 1 .5.5v5.21l3.248 1.856a.5.5 0 0 1-.496.868l-3.5-2A.5.5 0 0 1 7 9V3.5a.5.5 0 0 1 .5-.5"/>
+                      </svg>
+                </a>
+            </h4>
+        </section>
+    </div>
+</main>
+    
+<!-- Y bueno para terminar por aqui tenemos el Pie de la pagina que consta con:
+ -Webs del creador 
+ -Mi nombre 
+ -Fecha del proyecto
+-->
+
+<footer class="Footer">
+	<div class="Footer-webs">
+		<!-- Aqui puse las redes sociales de AURONPLAY y los svg de cada red -->
+		<ul class="Webs-ul">
+			<!-- Como estas redes van a otra pagina fuera de esta le añadi el "target=_blank y el rel_noreferrer" a cada una -->
+			<li class="Webs-li">
+				<a href="https://www.instagram.com/auronplay/?hl=es" class="Insta" title="Pagina-insta" target="_blank" rel="noreferrer">
+					<svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-instagram" viewBox="0 0 16 16">
+						<path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.9 3.9 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599s.453.546.598.92c.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.5 2.5 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.5 2.5 0 0 1-.92-.598 2.5 2.5 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233s.008-2.388.046-3.231c.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92s.546-.453.92-.598c.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92m-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217m0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334"/>
+					</svg>
+				</a>  
+			</li>
+			<li class="Webs-li">
+				<a href="https://www.youtube.com/user/AuronPlay" class="Youtube" title="Pagina-youtube" target="_blank" rel="noreferrer">
+					<svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-youtube" viewBox="0 0 16 16">
+						<path d="M8.051 1.999h.089c.822.003 4.987.033 6.11.335a2.01 2.01 0 0 1 1.415 1.42c.101.38.172.883.22 1.402l.01.104.022.26.008.104c.065.914.073 1.77.074 1.957v.075c-.001.194-.01 1.108-.082 2.06l-.008.105-.009.104c-.05.572-.124 1.14-.235 1.558a2.01 2.01 0 0 1-1.415 1.42c-1.16.312-5.569.334-6.18.335h-.142c-.309 0-1.587-.006-2.927-.052l-.17-.006-.087-.004-.171-.007-.171-.007c-1.11-.049-2.167-.128-2.654-.26a2.01 2.01 0 0 1-1.415-1.419c-.111-.417-.185-.986-.235-1.558L.09 9.82l-.008-.104A31 31 0 0 1 0 7.68v-.123c.002-.215.01-.958.064-1.778l.007-.103.003-.052.008-.104.022-.26.01-.104c.048-.519.119-1.023.22-1.402a2.01 2.01 0 0 1 1.415-1.42c.487-.13 1.544-.21 2.654-.26l.17-.007.172-.006.086-.003.171-.007A100 100 0 0 1 7.858 2zM6.4 5.209v4.818l4.157-2.408z"/>
+					</svg>
+				</a>
+			</li>
+			<li class="Webs-li">
+				<a href="https://x.com/auronplay?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor" class="X" title="Pagina-x" target="_blank" rel="noreferrer">
+					<svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-twitter-x" viewBox="0 0 16 16">
+						<path d="M12.6.75h2.454l-5.36 6.142L16 15.25h-4.937l-3.867-5.07-4.425 5.07H.316l5.733-6.57L0 .75h5.063l3.495 4.633L12.601.75Zm-.86 13.028h1.36L4.323 2.145H2.865z"/>
+					</svg>
+				</a>
+			</li>
+			<li class="Webs-li">
+				<a href="https://www.twitch.tv/auronplay?lang=es" class="Twitch" title="Pagina-twitch" target="_blank" rel="noreferrer">
+					<svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-twitch" viewBox="0 0 16 16">
+						<path d="M3.857 0 1 2.857v10.286h3.429V16l2.857-2.857H9.57L14.714 8V0zm9.714 7.429-2.285 2.285H9l-2 2v-2H4.429V1.143h9.142z"/>
+						<path d="M11.857 3.143h-1.143V6.57h1.143zm-3.143 0H7.571V6.57h1.143z"/>
+					</svg>
+				</a>
+			</li>
+		</ul>
+	</div>
+	<!-- Como ultimo le puse cositas varias-->
+	<div class="Footer-info">
+		<p class="Info-p">Politica de privacidad</p>
+		<p class="Info-p">Terminos y condiciones</p>
+		<p class="Info-p">¿Es ilegal ser guap@ en España?</p>
+	</div>
+</footer>
+  
+    
+</body>
+</html>

@@ -1,0 +1,733 @@
+:root {
+    font-size : 100%;
+    font-family : system-ui, sans-serif;
+    scroll-behavior : smooth;
+  }
+  * , *::before , *::after {
+    margin : 0;
+    padding : 0;
+    border : 0;
+    box-sizing : border-box;
+    vertical-align : baseline;
+  }
+  *::before , *::after {
+    display : block;
+  }
+  img , picture , video , iframe , figure , canvas {
+    max-width : 100%;
+    display : block;
+    width : 100%;
+    height : initial;
+    object-fit : cover;
+    object-position : center center;
+  }
+  a {
+    display : block;
+    text-decoration : none;
+    color : inherit;
+    font :  inherit;
+  }
+  p a {
+    display : inline;
+  }
+  li , menu, summary {
+    list-style-type : none;
+  }
+  ol {
+    counter-reset : revert;
+  }
+  h1 , h2 , h3 , h4 , h5 , h6 , p , span , a , strong , blockquote , i , b , u , em , pre , code , mark , del {
+    font :  inherit;
+    text-decoration :  none;
+    color : inherit;
+    overflow-wrap : break-word;
+    text-wrap : pretty;
+  }
+  mark {
+    background-color : transparent;
+  }
+  blockquote::before , blockquote::after , q::before , q::after {
+    content : none;
+  }
+  form , input , textarea , select , button , label {
+    font :  inherit;
+    hyphens : auto;
+    background-color : transparent;
+    color : inherit;
+    display : block;
+    appearance : none;
+  }
+  fieldset {
+    border : none;
+  }
+  ::placeholder {
+    color : unset;
+  }
+  button , label {
+    cursor : pointer;
+  }
+  table , tr , td , th , tbody , thead , tfoot {
+    border-collapse : collapse;
+    border-spacing : 0;
+    font : inherit;
+  }
+  svg {
+    width : 100%;
+    display : block;
+    fill : currentColor;
+  }
+  body {
+    min-height : 100vh;
+    line-height : 1.5em;
+    color : inherit;
+    hyphens : auto;
+    font-smooth : always;
+    -webkit-font-smoothing : antialiased;
+    -moz-osx-font-smoothing : grayscale;
+  }
+  @media ( prefers-color-scheme : dark ) {
+    :root {
+  }
+  
+  }
+  ::selection {
+    background-color : var(--tu-propia-variable);
+    color : var(--tu-propia-variable);
+  }
+
+  :root{
+    --font-text: cursive;
+  }
+  :root{
+    /* -------Colores------ */
+    --color-principal: #00AF9A;         /*   Color del Encabezado y del Pie de la pagina y de las sombras */
+    --color-secundario: #007b6d;         /*     Color de sombras*/
+    --color-naranjita: #e88504;      /*  Color de del Encabezado y del Pie de pagina*/
+    --color-fondo: #e88504;       /*    Color de fondo del testo y de la imagen*/
+    --sombra-uno: #000000;         /*    Color de la sombra positiva*/
+    --sombra-dos: #a39e99;          /*     Color de la sombra negativa*/
+    /* -----Tipografia----- */
+    --texto: "Acme", sans-serif;       /*  Tipografi de toda la paguina*/
+  }
+
+
+  /*--------------------------
+  index.css
+  -Variables
+  -Cambio
+  -Header
+  -Main
+  -Footer
+  -------------------------*/
+
+  /*------Cambio------*/
+  /* Cambio a modo oscuro la pagina y el texto cambia tambein de color*/
+  .Cambio.isActive{
+    background-color: #313131;
+    color: white;
+  }
+
+
+
+  /*-------Header------*/
+  /* Descripcion: Contiene el encabezado de la pagina.
+  -H-Wrapper
+  -H-h1
+  -H-logo
+  -Menu-taco
+  -Nav
+  -Modo oscuro
+  */
+  .Header{
+    background-color: var(--color-principal);
+  }
+  .Header-wrapper{
+    /* margin: 1em; */
+    padding: 1.5em;
+
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .Header-h1{}
+  .Header-logo{
+    font-family: var(--texto);
+    font-size: 2.5em;
+    font-weight: 1000;
+
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+  }
+  .Header-menu-taco{
+    position: relative;
+    display: none;
+  }
+  .Header-cerrar{
+    display: none;
+  }
+  .Header-nav{
+    position: relative;
+  }
+  .Header-ul{
+    gap: 5em;
+
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .Header-li{
+    font-family: var(--texto);
+    font-size: 1.6em;
+    font-weight: 600;
+  }
+  .Header-li:active{
+    font-size: 2em;
+    font-weight: 900;
+    color: #ec8b0c;
+  }
+  /*-----Modo-----*/
+  /* Boton quen contien "Sun y Moon" para hacer la pagina oscura o clara*/
+  .Header-li--modo{
+    /* background-color: red; */
+    width: 6em;
+    height: 3em;
+
+    gap: 1em;
+
+    padding: .5em;
+    border-radius: 2em;
+    border: rgb(22, 22, 22) solid .2em;
+
+    background: #3f3d3d;
+    box-shadow: 20px 20px 60px #bebebe,
+               -20px -20px 60px #ffffff;
+
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+
+    position: relative;
+  }
+  .Modo-sun{
+    color: orange;
+  }
+  .Modo-moon{
+    color: orange;
+  }
+  .Header-ul .Header-li--modo::before{
+    width: 2.5em;
+    height: 2.5em;
+    background-color: white;
+
+    border-radius: 50%;
+    border: solid black thin;
+
+    position: absolute;
+    content: "";
+
+    right: unset;
+    left: 0em;
+  }
+  .Header-ul .Header-li--modo.isActive::before{
+    border: solid black thin;
+
+    left: unset;
+    right: 0em;
+  }
+
+  /*------Media------*/
+  /* Para cuando la pagina es vista en diferentes dispositivos lleva sus respectivas medias
+  asi se adapta a cada panatalla y tipo de pantalla
+  */
+  @media(max-width:960px){
+    .Header-logo{
+      font-size: 1.3em;
+      font-weight: 900;
+    }
+  }
+  @media(max-width:850px){
+    .Header-logo{
+      font-size: 2.5em;
+      font-weight: 1000;
+    }
+    .Header-menu-taco{
+      display: block;
+    }
+    .Header-cerrar{
+      display: block;
+      /* opacity: 0; */
+      position: relative;
+    }
+     .Header-nav{
+      background-color: var(--color-secundario);
+      padding: 2em;
+
+      gap: 2em;
+
+      display: flex;
+      flex-direction: column;
+      align-items: end;
+
+      position: absolute;
+      top: 0;
+      right: 0;
+
+      opacity: 0;
+      visibility: hidden;
+      transition: .5s ease;
+     }
+     .Header-nav.isActive{
+      background-color: #414141;
+     }
+     .Header-nav.isVisible{
+      opacity: 1;
+      visibility: visible;
+     }
+     .Header-ul{
+      flex-direction: column;
+      align-items: end;
+     }
+  }
+  @media(max-width:480px){
+    .Header-logo{
+      font-size: 1.5em;
+      font-weight: 900;
+    }
+  }
+
+
+
+
+  /*----------Main---------*/
+  /* Descripcion: Contiene lo principan de la pagina.
+  Estruccturada:
+  -Section
+  -Galerias
+  -Imagenes
+  -Ligthbox
+  */
+  .Main{
+    /* background-color: aqua; */
+    margin-top: 4em;
+   }
+   /* Cada galeria tienen sus imagenes pequeñas*/
+   .Section{
+    background-color: var(--color-fondo);
+      width: 80%;
+      
+      border-radius: 1em;
+  
+      background: var(--color-fondo);
+      box-shadow: 20px 20px 60px var(--sombra-uno),
+                 -20px -20px 60px var(--sombra-dos);
+      
+      margin: 1.5em auto;
+      padding: 1em;
+   }
+   .Secti-h2{
+    padding: .5em;
+  
+      display: flex;
+      justify-content: center;
+      align-items: center;
+  
+      font-size: 1.5em;
+      font-family: var(--texto);
+      font-weight: 650;
+      /* text-shadow: rgb(129, 129, 129) 6px 0; */
+      text-shadow: rgba(0, 0, 0, 0.461) 6px 6px 6px;
+   }
+   .Secti-p{
+    padding: .2em;
+  
+      display: flex;
+      justify-content: start;
+      align-items: center;
+  
+      font-size: 1em;
+      font-family: var(--texto);
+      font-weight: 600;
+      font-style: italic;
+      word-spacing: .5em;
+  
+      line-height: 2em;
+   }
+   .Galeria{
+    width: 90%;
+    max-width: 70em;
+  
+    border-radius: 1em;
+  
+    gap: 7em;
+  
+    margin: auto;
+    padding: .5em;
+    margin-bottom: 6em;
+  
+    display: grid;
+    grid-template-columns: repeat(2 , 1fr);
+   }
+   /* Las imagenes tienen su Hover y su Active para que las imagenes se hagan mas grander y mas pequeñas*/
+ .Img{
+  border-radius: 1em;
+  /* gap: 2em; */
+
+  box-shadow: 10px 10px 30px var(--color-secundario),
+               -10px -10px 30px var(--color-principal);
+      
+  transition: .5s ease;           
+ }
+ .Img:hover{
+  transform: scale(.95);
+ }
+ .Img:active{
+  transform: scale(1.1);
+ }
+ .Lightbox{
+  /* background-color: rgb(13, 13, 236); */
+  width: 100%;
+  height: 100%;
+  backdrop-filter: blur(2em);
+
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+
+  gap: 2em;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  opacity: 0;
+  pointer-events: none;
+
+  transition: 0.5s ease;
+ }
+ /* En cada Linghtbox esta la imagen grande y un boton para que se pueda cerrar la imagen grande y voler a la imagen de la galeria*/
+ .Lightbox.isActive{
+  opacity: 1;
+  pointer-events: auto;
+ }
+ .Lightbox-btn{
+  /* color: black; */
+  padding: .7em 1.5em;
+
+  border-radius: 1em;
+
+  box-shadow: 10px 10px 30px var(--color-secundario),
+               -10px -10px 30px var(--color-principal);
+
+  transition: .5s ease;             
+ }
+ .Lightbox-btn:hover{
+  transform: scale(.9);
+ }
+ .Lightbox-btn:active{
+  transform: scale(1.1);
+ }
+ .Img-g{
+  background-color: var(--color-secundario);
+  width: 100%;
+  max-width: 800px;
+  height: 70vh;
+  gap: 1em;
+
+  border-radius: 1em;
+
+  box-shadow: 10px 10px 30px var(--color-secundario),
+               -10px -10px 30px var(--color-principal);
+ }
+
+
+
+ .Galerias{
+  width: 95%;
+  max-width: 90em;
+
+  border-radius: 1em;
+  margin: auto;
+
+  gap: 4em;
+
+  padding: .5em;
+  margin-bottom: 6em;
+
+  display: grid;
+  grid-template-columns: repeat(3 , 1fr);
+ }
+ .Peque{
+  width: 500px;
+  border-radius: 1em;
+
+  box-shadow: 10px 10px 30px var(--color-secundario),
+               -10px -10px 30px var(--color-principal);
+      
+  transition: .5s ease;
+ }
+ .Peque:hover{
+  transform: scale(.95);
+ }
+ .Peque:active{
+  transform: scale(1.1);
+ }
+ .Lightboxs{
+  width: 100%;
+  height: 100%;
+  backdrop-filter: blur(2em);
+
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+
+  gap: 2em;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  opacity: 0;
+  pointer-events: none;
+
+  transition: 0.5s ease;
+ }
+ .Lightboxs.isActive{
+  opacity: 1;
+  pointer-events: auto;
+ }
+ .Lightbox-btns{
+  padding: .7em 1.5em;
+
+  border-radius: 1em;
+
+  box-shadow: 10px 10px 30px var(--color-secundario),
+               -10px -10px 30px var(--color-principal);
+
+  transition: .5s ease;
+}
+.Lightbox-btns:hover{
+  transform: scale(.9);
+ }
+ .Lightbox-btns:active{
+  transform: scale(1.1);
+ }
+ .Grande{
+  background-color: var(--color-secundario);
+  width: 100%;
+  max-width: 800px;
+  height: 70vh;
+  gap: 1em;
+
+  border-radius: 1em;
+
+  box-shadow: 10px 10px 30px var(--color-secundario),
+               -10px -10px 30px var(--color-principal);
+ }
+
+
+ .Galeria-ul{
+  width: 90%;
+  max-width: 60em;
+
+  border-radius: 1em;
+
+  /* box-shadow: 10px 10px 30px #007b6d,
+               -10px -10px 30px #00AF9A; */
+
+  gap: 7em;
+
+  margin: auto;
+  padding: .5em;
+  margin-bottom: 6em;
+
+  display: grid;
+  grid-template-columns: repeat(2 , 1fr);
+ }
+ .Imge{
+  width: 500px;
+  border-radius: 1em;
+
+  box-shadow: 10px 10px 30px var(--color-secundario),
+               -10px -10px 30px var(--color-principal);
+      
+  transition: .5s ease;
+ }
+ .Imge:hover{
+  transform: scale(.95);
+ }
+ .Imge:active{
+  transform: scale(1.1);
+ }
+ .Lightboxx{
+  width: 100%;
+  height: 100%;
+  backdrop-filter: blur(2em);
+
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+
+  gap: 2em;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  opacity: 0;
+  pointer-events: none;
+
+  transition: 0.5s ease;
+ }
+ .Lightboxx.isActive{
+  opacity: 1;
+  pointer-events: auto;
+ }
+ .Lightboxx-btn{padding: .7em 1.5em;
+
+  border-radius: 1em;
+
+  box-shadow: 10px 10px 30px var(--color-secundario),
+               -10px -10px 30px var(--color-principal);
+
+  transition: .5s ease;
+}
+.Lightboxx-btn:hover{
+  transform: scale(.9);
+ }
+ .Lightboxx-btn:active{
+  transform: scale(1.1);
+ }
+.Img-grand{
+  background-color: var(--color-secundario);
+  width: 100%;
+  max-width: 800px;
+  height: 70vh;
+  gap: 1em;
+
+  border-radius: 1em;
+
+  box-shadow: 10px 10px 30px var(--color-secundario),
+               -10px -10px 30px var(--color-principal);
+}
+
+
+/*------Media------*/
+  /* Para cuando la pagina es vista en diferentes dispositivos lleva sus respectivas medias
+  asi se adapta a cada panatalla y tipo de pantalla
+  */
+@media(max-width:650px){
+  .Galeria{
+    grid-template-columns: 1fr;
+  }
+  .Galerias{
+    width: 80%;
+
+    margin: 5em auto;
+    grid-template-columns: 1fr;
+  }
+  .Galeria-ul{
+    width: 80%;
+
+    margin: 5em auto;
+    grid-template-columns: 1fr;
+  }
+}
+@media(max-width:480px){
+  .Galeria{
+    grid-template-columns: 1fr;
+  }
+  .Galerias{
+    width: 80%;
+
+    margin: 5em auto;
+    grid-template-columns: 1fr;
+  }
+  .Galeria-ul{
+    width: 80%;
+
+    margin: 5em auto;
+    grid-template-columns: 1fr;
+  }
+}
+
+
+
+
+
+/*----------Footer---------*/
+  /* Descripcion: Contiene lo principan de la pagina.
+  Estruccturada:
+  -Webs
+  -Info
+  */
+  .Footer{
+    background-color: var(--color-principal);
+    /* background-color: #00AF9A; */
+     /* width: 90%; */
+     
+     margin: 5em auto;
+  
+     display: flex;
+     flex-flow: column;
+     justify-content: center;
+     align-items: center;
+  }
+  .Footer-webs{
+    width: 50%;
+    margin: 4em;
+  }
+  .Webs-ul{
+    /* gap: 4em; */
+  
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .Webs-li{}
+  .Footer-info{
+    margin: 2em;
+    padding: 1em;
+  
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+  }
+  .Info-p{
+    font-size: 1.3em;
+    font-family: var(--texto);
+  }
+   /*------Media------*/
+    /* Para cuando la pagina es vista en diferentes dispositivos lleva sus respectivas medias
+    asi se adapta a cada panatalla y tipo de pantalla
+    */
+  @media(max-width:650px){
+    .Footer-webs{
+      width: 70%;
+    }
+  }
+  @media(max-width:480px){
+    .Webs-ul{
+      gap: 4em;
+  
+      display: flex;
+      flex-flow: column;
+      justify-content: center;
+      align-items: center;
+    }
+    .Footer-info{
+      gap: 3em;
+    }
+    .Info-p{
+      text-align: center;
+    }
+  }

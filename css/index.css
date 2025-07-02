@@ -1,0 +1,738 @@
+:root {
+    font-size : 100%;
+    font-family : system-ui, sans-serif;
+    scroll-behavior : smooth;
+  }
+  * , *::before , *::after {
+    margin : 0;
+    padding : 0;
+    border : 0;
+    box-sizing : border-box;
+    vertical-align : baseline;
+  }
+  *::before , *::after {
+    display : block;
+  }
+  img , picture , video , iframe , figure , canvas {
+    max-width : 100%;
+    display : block;
+    width : 100%;
+    height : initial;
+    object-fit : cover;
+    object-position : center center;
+  }
+  a {
+    display : block;
+    text-decoration : none;
+    color : inherit;
+    font :  inherit;
+  }
+  p a {
+    display : inline;
+  }
+  li , menu, summary {
+    list-style-type : none;
+  }
+  ol {
+    counter-reset : revert;
+  }
+  h1 , h2 , h3 , h4 , h5 , h6 , p , span , a , strong , blockquote , i , b , u , em , pre , code , mark , del {
+    font :  inherit;
+    text-decoration :  none;
+    color : inherit;
+    overflow-wrap : break-word;
+    text-wrap : pretty;
+  }
+  mark {
+    background-color : transparent;
+  }
+  blockquote::before , blockquote::after , q::before , q::after {
+    content : none;
+  }
+  form , input , textarea , select , button , label {
+    font :  inherit;
+    hyphens : auto;
+    background-color : transparent;
+    color : inherit;
+    display : block;
+    appearance : none;
+  }
+  fieldset {
+    border : none;
+  }
+  ::placeholder {
+    color : unset;
+  }
+  button , label {
+    cursor : pointer;
+  }
+  table , tr , td , th , tbody , thead , tfoot {
+    border-collapse : collapse;
+    border-spacing : 0;
+    font : inherit;
+  }
+  svg {
+    width : 100%;
+    display : block;
+    fill : currentColor;
+  }
+  body {
+    min-height : 100vh;
+    line-height : 1.5em;
+    color : inherit;
+    hyphens : auto;
+    font-smooth : always;
+    -webkit-font-smoothing : antialiased;
+    -moz-osx-font-smoothing : grayscale;
+  }
+  @media ( prefers-color-scheme : dark ) {
+    :root {
+  }
+  
+  }
+  ::selection {
+    background-color : var(--tu-propia-variable);
+    color : var(--tu-propia-variable);
+  }
+
+  :root{
+    --font-text: cursive;
+  }
+
+
+  :root{
+    /* -------Colores------ */
+    --color-naranjita: #ec8b0c;     /*  Color principal como de la barra de la paguina*/
+    --color-oscuro: #313131;       /*   Color del Modo oscuro*/
+
+    --color-fondo: #00AF9A;       /*    Color de fonfo del testo y de la imagen*/
+    --sombra-uno: #b54800;         /*    Color de la sombra positiva*/
+    --sombra-dos: #ce7f3e;          /*     Color de la sombra negativa*/
+
+    /* -----Tipografia----- */
+    --letras: "Acme", sans-serif;     /*  Tipografi de toda la paguina*/
+    /*-----URL que he colocado en el grid Blackground-imge-----*/
+    --img: url(../assets/auronreina.webp);
+    --video: url(https://media1.tenor.com/m/XC0wa7aMaVkAAAAd/auronplay-risa.gif);
+    --videos: url(https://media1.tenor.com/m/Bwb_MZYoBl4AAAAd/auron-dance-auron-bailongo.gif);
+    --imag: url(../assets/auronp.webp);
+  }
+
+
+  /*--------------------------
+  index.css
+  -Variables
+  -Cambio
+  -Mouse
+  -Header
+  -Main
+  -Footer
+  -------------------------*/
+
+  /*------Cambio------*/
+  /* Cambio a modo oscuro la pagina y el texto cambia tambein de color*/
+  .Cambio.isActive{
+    background-color: var(--color-oscuro);
+    color: white;
+  }
+
+  /*-------Mouse--------*/
+  /* Descipcion: SVG que funciona con el mouse donde mueva el mouse va el svg*/
+  .Mouse{
+    width: 50px;
+    height: 50px;
+
+    position: fixed;
+
+    top: -25px;
+    left: -25px;
+  }
+  .Mouse.isNone{
+    display: none;
+  }
+
+    /*-------Header------*/
+  /* Descripcion: Contiene el encabezado de la paguina.
+  -H-Wrapper
+  -H-h1
+  -H-logo
+  -Menu-taco
+  -Nav
+  -Modo oscuro
+  */
+  .Header{
+    background-color: #00AF9A;
+  }
+  .Header-wrapper{
+    padding: 1.5em;
+
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .Header-logo{
+    font-family: var(--letras);
+    font-size: 2.5em;
+    font-weight: 1000;
+
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+  }
+  .Header-menu-taco{
+    position: relative;
+    display: none;
+  }
+  .Header-cerrar{
+    display: none;
+  }
+  .Header-nav{
+    /* background-color: green; */
+    position: relative;
+  }
+  .Header-ul{
+    gap: 5em;
+
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .Header-li{
+    font-family: var(--letras);
+    font-size: 1.6em;
+    font-weight: 600;
+  }
+  .Header-li:active{
+    font-size: 2em;
+    font-weight: 900;
+    color: var(--color-naranjita);
+  }
+  /*-----Modo-----*/
+  /* Boton quen contien "Sun y Moon" para hacer la pagina oscura o clara*/
+  .Header-li--modo{
+    /* background-color: red; */
+    width: 6em;
+    height: 3em;
+
+    gap: 1em;
+
+    padding: .5em;
+    border-radius: 2em;
+    border: rgb(22, 22, 22) solid .2em;
+
+    background: #3f3d3d;
+    box-shadow: 20px 20px 60px #bebebe,
+               -20px -20px 60px #ffffff;
+
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+
+    position: relative;
+  }
+  .Modo-sun{
+    color: orange;
+  }
+  .Modo-moon{
+    color: orange;
+  }
+  .Header-ul .Header-li--modo::before{
+    width: 2.5em;
+    height: 2.5em;
+    background-color: white;
+
+    border-radius: 50%;
+    border: solid black thin;
+
+    position: absolute;
+    content: "";
+
+    right: unset;
+    left: 0em;
+  }
+  .Header-ul .Header-li--modo.isActive::before{
+    border: solid black thin;
+
+    left: unset;
+    right: 0em;
+  }
+  
+
+  /*------Media------*/
+  /* Para cuando la pagina es vista en diferentes dispositivos lleva sus respectivas medias
+  asi se adapta a cada panatalla y tipo de pantalla
+  */
+  @media(max-width:960px){
+    .Header-logo{
+      font-size: 1.3em;
+      font-weight: 900;
+    }
+  }
+  @media(max-width:850px){
+    .Header-logo{
+      font-size: 2.5em;
+      font-weight: 1000;
+    }
+    .Header-menu-taco{
+        display: block;
+    }
+    .Header-cerrar{
+        display: block;
+        /* opacity: 0; */
+        position: relative;
+    }
+    .Header-nav{
+        background-color: var(--color-naranjita);
+        padding: 2em;
+  
+        gap: 2em;
+  
+        display: flex;
+        flex-direction: column;
+        align-items: end;
+  
+        position: absolute;
+        top: 0;
+        right: 0;
+  
+        opacity: 0;
+        visibility: hidden;
+        transition: .5s ease;
+    }
+    .Header-nav.isActive{
+        background-color: #414141;
+    }
+    .Header-nav.isVisible{
+        opacity: 1;
+        visibility: visible;
+    }
+    .Header-ul{
+        flex-direction: column;
+        align-items: end;
+    }
+  }
+  @media(max-width:480px){
+    .Header-logo{
+      font-size: 1.5em;
+      font-weight: 900;
+    }
+  }
+
+
+
+
+
+  /*----------Main---------*/
+  /* Descripcion: Contiene lo principan de la pagina.
+  Estruccturada:
+  -Marquesunas
+  -Grid
+  -Acordeon
+  */
+  .Main{}
+  .Main-wrapper{
+    /* background-color: yellow; */
+  }
+  /* Contiene cada cosa qu lleva la marquesina como tamaño, margenes, colores, los textos, 
+  las iamgenes y animaciones como ir mas rapido o mas lento
+  */
+  .Wrapper-marquesinas{
+    background-color: var(--color-naranjita);
+    width: 90%;
+    
+    border-radius: 1em;
+
+    padding: 1em;
+    margin: 1em auto;
+
+    overflow: hidden;
+    /* position: absolute; */
+  }
+  .Marquesinas-img{
+    width: 300%;
+
+    margin-bottom: 1em;
+
+    display: grid;
+    grid-template-columns: repeat(6 , 1fr);
+
+    animation: marquesi 10s linear infinite both;
+    /* position: relative; */
+  }
+  .Marque-img{
+    width: 10em;
+    border-radius: 2em;
+    /* position: relative; */
+  }
+  .Marquesinas-texto{
+    width: 300%;
+
+    display: grid;
+    grid-template-columns: repeat(6 , 1fr);
+
+    animation: marques 15s linear infinite both;
+  }
+  .Marquesina-span{
+    text-align: center;
+    font-size: 2vw;
+    font-family: var(--letras);
+  }
+  .Wrapper-article{
+    /* background-color: #00AF9A; */
+    width: 98%;
+
+    margin: 3em auto;
+    padding: 1em;
+
+    border-radius: 1em;
+
+    background: var(--color-fondo);
+    box-shadow: 20px 20px 60px var(--sombra-uno),
+               -20px -20px 60px var(--sombra-dos);
+  }
+  .h2{
+    padding: .7em;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 2em;
+    font-family: var(--texto);
+    font-weight: 600;
+    /* text-shadow: rgb(129, 129, 129) 6px 0; */
+    text-shadow: rgb(116, 116, 116) 6px 6px 6px;
+  }
+  .h3{
+    padding: .7em;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 1.7em;
+    font-family: var(--texto);
+    font-weight: 550;
+    /* text-shadow: rgb(129, 129, 129) 6px 0; */
+    text-shadow: rgb(116, 116, 116) 6px 6px 6px;
+  }
+  .p-arti{
+    padding: .7em;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 1.5em;
+    font-family: var(--texto);
+    font-weight: 500;
+    font-style: italic;
+    word-spacing: .5em;
+
+    line-height: 1.2em;
+  }
+  .Wrapper-grid{
+    /* background-color: aqua; */
+    width: 95%;
+    margin: 4em auto;
+
+    border-radius: 1em;
+
+    display: grid;
+    grid-template-columns: repeat(2 , 1fr);
+    grid-auto-rows: 45em;
+
+    gap: 1em;
+  }
+  /* He usado URL para poder colocar las imagenes y videos porque se me colocaban de la mejor manera*/
+  .Grid-img{
+    /* background-color: #313131; */
+    background-image: var(--img);
+    background-position: center;
+    background-size: cover;
+
+    border-radius: 1em;
+  }
+  .Grid-video{
+    background-image: var(--video);
+    background-size: cover;
+    background-position: center;
+
+    border-radius: 1em;
+  }
+  .Grid-videos{
+    background-image: var(--videos);
+    background-size: cover;
+
+    border-radius: 1em;
+  }
+  .Grid-imag{
+    /* background-color: #bebebe; */
+    border-radius: 1em;
+    background-image: var(--imag);
+    background-position: center;
+    background-size: cover;
+
+    overflow: hidden;
+  }
+  /* Al acordeon le coloque sombras y no lo puse al 100% de la pantalla asi se veria mejor*/
+  .Wrapper-section{
+    /* position: relative; */
+    width: 75%;
+
+    border-radius: .5em;
+    background: var(--color-naranjita);
+    box-shadow: 20px 20px 60px #000000,
+               -20px -20px 60px #ce7f3e;
+
+    margin: 2em auto;
+    padding: 1em;
+  }.Section-acordeon{
+    margin: .5em;
+    padding: 1em;
+    background: #e88504;
+    box-shadow: 20px 20px 60px #b54800,
+               -20px -20px 60px #ce7f3e;
+
+    border-radius: .5em;
+  }
+  .Button-a{
+    font-size: 1.5em;
+    font-family: var(--letras);
+    /* color: #00AF9A; */
+    margin: .5em;
+    padding: 1em;
+    border-radius: .5em;
+
+    /* background: #e88504;
+    box-shadow: 20px 20px 60px #b54800,
+               -20px -20px 60px #ce7f3e; */
+    background: #00AF9A;
+    box-shadow: 10px 10px 30px #007b6d,
+               -10px -10px 30px #00AF9A;
+  }
+  .Button-a:hover{
+    transform: scale(0.975);
+  }
+  
+  .Button-a:active{
+    transform: scale(0.975);
+  }
+  .p-a{
+    font-size: 1.5em;
+    font-family: var(--letras);
+
+    height: 0;
+    padding: 0;
+
+    overflow: hidden;
+    transition: 1s ease;
+  }
+  .p-a.isActive{
+    height: 3em;
+  }
+
+  /*Aqui es donde puedo cambiar la velocidad de las marquesinas*/
+  @keyframes marquesi{
+    0%{
+      transform: translateX(0%);
+    }
+    100%{
+      transform: translateX(-66%);
+    }
+  }
+  @keyframes marques{
+    0%{
+      transform: translateX(0%);
+    }
+    100%{
+      transform: translateX(-66%);
+    }
+  }
+
+  /*------Media------*/
+  /* Para cuando la pagina es vista en diferentes dispositivos lleva sus respectivas medias
+  asi se adapta a cada panatalla y tipo de pantalla
+  */
+  @media(max-width:850px){
+    .Wrapper-marquesinas{
+      width: 50%;
+      font-size: 1.5vw;
+    }
+    .Marquesinas-texto{
+      display: none;
+    }
+    .Wrapper-section{
+      width: 85%;
+    }
+    .p-a{
+      font-size: 1em;
+    }
+  }
+  @media(max-width:650px){
+    .Wrapper-grid{
+      grid-template-columns: 1rf;
+    }
+    .Grid-img{
+      grid-column: span 2;
+    }
+    .Grid-video{
+      grid-column: span 2;
+      width: 90%;
+    }
+    .Grid-videos{
+      grid-column: span 2;
+    }
+    .Grid-imag{
+      grid-column: span 2;
+    }
+    .Wrapper-section{
+      width: 95%;
+    }
+    .Button-a{
+      font-size: .9em;
+      padding: .5em;
+    }
+    .p-a{
+      font-size: .9em;
+    }
+  }
+  @media(max-width:480px){
+    .Mouse{
+      display: none;
+    }
+    .Section-marquesinas{
+      width: 60%;
+      font-size: 1.5vw;
+    }
+    .Marquesinas-texto{
+      display: none;
+    }
+    .Wrapper-grid{
+      grid-template-columns: 1rf;
+    }
+    .Grid-img{
+      grid-column: span 2;
+      background-image: url(https://media1.tenor.com/m/Bwb_MZYoBl4AAAAd/auron-dance-auron-bailongo.gif);
+
+      
+      background-size: cover;
+    }
+    .Grid-video{
+      /* grid-column: span 2; */
+      display: none;
+    }
+    .Grid-videos{
+      /* grid-column: span 2; */
+      display: none;
+    }
+    .Grid-imag{
+      grid-column: span 2;
+    }
+    .Wrapper-section{
+      width: 95%;
+
+      margin: .5em auto;
+      padding: .5em;
+    }
+    .Button-a{
+      font-size: .9em;
+      padding: .5em;
+
+      background: #00AF9A;
+      box-shadow: -10px -10px 30px #00AF9A;
+               
+    }
+    .p-a{
+      font-size: .9em;
+
+      line-height: 1em;
+    }
+  }
+
+
+
+
+
+  /*----------Footer---------*/
+  /* Descripcion: Contiene lo principan de la pagina.
+  Estruccturada:
+  -Webs
+  -Info
+  */
+.Footer{
+  background-color: #00AF9A;
+   /* width: 90%; */
+   
+   margin: 4em auto;
+
+   display: flex;
+   flex-flow: column;
+   justify-content: center;
+   align-items: center;
+}
+.Footer-webs{
+  width: 50%;
+  margin: 2em;
+}
+.Webs-ul{
+  /* gap: 4em; */
+
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+}
+.Footer-info{
+  margin: 2em;
+  padding: 1em;
+
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+}
+.Info-p{
+  font-size: 1.3em;
+  font-family: var(--letras);
+}
+/*------Media------*/
+  /* Para cuando la pagina es vista en diferentes dispositivos lleva sus respectivas medias
+  asi se adapta a cada panatalla y tipo de pantalla
+  */
+  @media(max-width:650px){
+    .Footer-webs{
+      width: 70%;
+    }
+  }
+  
+  @media(max-width:480px){
+    .Header{
+      background-color: var(--color-naranjita);
+    }
+    .Wrapper-marquesinas{
+      display: none;
+    }
+    .Footer{
+      background-color: var(--color-naranjita);
+    }
+    .Webs-ul{
+      gap: 4em;
+  
+      display: flex;
+      flex-flow: column;
+      justify-content: center;
+      align-items: center;
+    }
+    .Footer-info{
+      gap: 3em;
+    }
+    .Info-p{
+      text-align: center;
+    }
+  }
